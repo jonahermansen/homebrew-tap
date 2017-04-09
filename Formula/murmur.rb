@@ -9,7 +9,7 @@ class Murmur < Formula
     etc.install "murmur.ini"
   end
 
-  plist_options :manual => "murmur"
+  plist_options :manual => "murmurd"
 
   def plist; <<-EOS.undent
     <?xml version="1.0" encoding="UTF-8"?>
@@ -22,8 +22,9 @@ class Murmur < Formula
         <string>#{HOMEBREW_PREFIX}</string>
         <key>ProgramArguments</key>
         <array>
-            <string>#{opt_bin}/mpd</string>
-            <string>--no-daemon</string>
+            <string>#{opt_bin}/murmurd</string>
+            <string>-ini</string>
+            <string>#{etc}/murmur.ini</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
