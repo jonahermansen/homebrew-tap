@@ -23,6 +23,7 @@ class Murmur < Formula
         <key>ProgramArguments</key>
         <array>
             <string>#{opt_bin}/murmurd</string>
+            <string>-fg</string>
             <string>-ini</string>
             <string>#{etc}/murmur.ini</string>
         </array>
